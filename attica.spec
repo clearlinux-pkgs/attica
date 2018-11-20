@@ -6,7 +6,7 @@
 #
 Name     : attica
 Version  : 5.52.0
-Release  : 8
+Release  : 9
 URL      : https://download.kde.org/stable/frameworks/5.52/attica-5.52.0.tar.xz
 Source0  : https://download.kde.org/stable/frameworks/5.52/attica-5.52.0.tar.xz
 Source99 : https://download.kde.org/stable/frameworks/5.52/attica-5.52.0.tar.xz.sig
@@ -28,14 +28,6 @@ Open Collaboration Service client library
 Attica is a Qt library that implements the Open Collaboration Services API version 1.6.
 The REST API is defined here:
 https://www.freedesktop.org/wiki/Specifications/open-collaboration-services/
-
-%package abi
-Summary: abi components for the attica package.
-Group: Default
-
-%description abi
-abi components for the attica package.
-
 
 %package data
 Summary: data components for the attica package.
@@ -82,7 +74,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1541865162
+export SOURCE_DATE_EPOCH=1542675557
 mkdir -p clr-build
 pushd clr-build
 %cmake ..
@@ -90,7 +82,7 @@ make  %{?_smp_mflags} VERBOSE=1
 popd
 
 %install
-export SOURCE_DATE_EPOCH=1541865162
+export SOURCE_DATE_EPOCH=1542675557
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/attica
 cp COPYING %{buildroot}/usr/share/package-licenses/attica/COPYING
@@ -104,10 +96,6 @@ popd
 
 %files
 %defattr(-,root,root,-)
-
-%files abi
-%defattr(-,root,root,-)
-/usr/share/abi/libKF5Attica.so.5.52.0.abi
 
 %files data
 %defattr(-,root,root,-)
