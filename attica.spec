@@ -5,11 +5,11 @@
 # Source0 file verified with key 0x58D0EE648A48B3BB (faure@kde.org)
 #
 Name     : attica
-Version  : 5.52.0
-Release  : 9
-URL      : https://download.kde.org/stable/frameworks/5.52/attica-5.52.0.tar.xz
-Source0  : https://download.kde.org/stable/frameworks/5.52/attica-5.52.0.tar.xz
-Source99 : https://download.kde.org/stable/frameworks/5.52/attica-5.52.0.tar.xz.sig
+Version  : 5.53.0
+Release  : 10
+URL      : https://download.kde.org/stable/frameworks/5.53/attica-5.53.0.tar.xz
+Source0  : https://download.kde.org/stable/frameworks/5.53/attica-5.53.0.tar.xz
+Source99 : https://download.kde.org/stable/frameworks/5.53/attica-5.53.0.tar.xz.sig
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : LGPL-2.1 LGPL-3.0
@@ -67,22 +67,22 @@ license components for the attica package.
 
 
 %prep
-%setup -q -n attica-5.52.0
+%setup -q -n attica-5.53.0
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1542675557
+export SOURCE_DATE_EPOCH=1544534733
 mkdir -p clr-build
 pushd clr-build
 %cmake ..
-make  %{?_smp_mflags} VERBOSE=1
+make  %{?_smp_mflags}
 popd
 
 %install
-export SOURCE_DATE_EPOCH=1542675557
+export SOURCE_DATE_EPOCH=1544534733
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/attica
 cp COPYING %{buildroot}/usr/share/package-licenses/attica/COPYING
@@ -197,7 +197,7 @@ popd
 %files lib
 %defattr(-,root,root,-)
 /usr/lib64/libKF5Attica.so.5
-/usr/lib64/libKF5Attica.so.5.52.0
+/usr/lib64/libKF5Attica.so.5.53.0
 
 %files license
 %defattr(0644,root,root,0755)
