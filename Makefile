@@ -1,5 +1,5 @@
 PKG_NAME := attica
-URL = https://download.kde.org/stable/frameworks/5.61/attica-5.61.0.tar.xz
+URL = https://download.kde.org/stable/frameworks/5.62/attica-5.62.0.tar.xz
 ARCHIVES = 
 
 include ../common/Makefile.common
